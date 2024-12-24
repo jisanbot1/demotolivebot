@@ -1,0 +1,11 @@
+// বর্তমান URL চেক করে শুধুমাত্র অ্যাড্রেস বার আপডেট করে
+if (window.location.href === "https://pocketoption.com/en/cabinet/demo-quick-high-low/") {
+    window.history.pushState({}, '', "https://pocketoption.com/en/cabinet/quick-high-low/USD/");
+}
+
+// "QT Demo" টেক্সট খুঁজে বের করে "QT Real" এ পরিবর্তন করে
+document.querySelectorAll('.balance-info-block__label').forEach(label => {
+    if (label.textContent.trim() === 'QT Demo') {
+        label.textContent = 'QT Real';
+    }
+});
